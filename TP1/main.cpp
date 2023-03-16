@@ -6,6 +6,8 @@ using namespace std;
 
 int main()
 {
+    //Cercle n'est psa un polygone
+    //Creer les destructeurs
     Rectangle R;
     Carre C(10);
     R.ModifierLongeurCote(4,5);
