@@ -1,4 +1,6 @@
 #include "TriangleEquilateral.hpp"
+#include <iostream>
+using namespace std;
 
 TriangleEquilateral::TriangleEquilateral() : Polygone(3)
 {
@@ -26,4 +28,9 @@ void TriangleEquilateral::SetCote(int lgcote)
 int TriangleEquilateral::perimetre()
 {
     return 3 * m_lgcote;
+}
+
+void TriangleEquilateral::afficherCaracteristiques()
+{
+    cout<<"Triangle rectangle de côté "<<m_lgcote<<endl;
 }

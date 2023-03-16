@@ -15,6 +15,7 @@ class TriangleEquilateral : public Polygone
     int GetCote();
     void SetCote(int lgcote);
     int perimetre();
+    void afficherCaracteristiques();
 
 private:
 

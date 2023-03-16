@@ -7,7 +7,7 @@ class Polygone : public Figure // polygone hérite de figure
 public:
     // constructeur
     Polygone(int nbCotes);
-    void afficherCaracteristiques();
+    virtual void afficherCaracteristiques();
     //Destructeur
     ~Polygone();
 
