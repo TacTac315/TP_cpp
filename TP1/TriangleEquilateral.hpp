@@ -8,6 +8,8 @@ class TriangleEquilateral : public Polygone
     //Constructeur
     TriangleEquilateral();
     TriangleEquilateral(int lgcote);
+    //Destructeur
+    ~TriangleEquilateral();
 
     //Methodes
     int GetCote();

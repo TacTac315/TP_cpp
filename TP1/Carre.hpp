@@ -8,6 +8,8 @@ class Carre : public Rectangle
     //Constructeurs
     Carre();
     Carre(int cote);
+    //Destructeur
+    ~Carre();
 };
 
 #endif

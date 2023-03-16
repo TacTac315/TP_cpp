@@ -9,3 +9,7 @@ Carre::Carre(int cote) : Rectangle()
 {
     this->ModifierLongeurCote(cote,cote);
 }
+
+Carre::~Carre()
+{
+}

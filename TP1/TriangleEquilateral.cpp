@@ -2,12 +2,15 @@
 
 TriangleEquilateral::TriangleEquilateral() : Polygone(3)
 {
-
 }
 
 TriangleEquilateral::TriangleEquilateral(int lgcote) : Polygone(3)
 {
-    m_lgcote= lgcote;
+    m_lgcote = lgcote;
+}
+
+TriangleEquilateral::~TriangleEquilateral()
+{
 }
 
 int TriangleEquilateral::GetCote()
@@ -17,11 +20,10 @@ int TriangleEquilateral::GetCote()
 
 void TriangleEquilateral::SetCote(int lgcote)
 {
-    m_lgcote=lgcote;
+    m_lgcote = lgcote;
 }
 
 int TriangleEquilateral::perimetre()
 {
-    return 3*m_lgcote;
+    return 3 * m_lgcote;
 }
-
