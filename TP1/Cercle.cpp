@@ -5,16 +5,19 @@ using namespace std;
 Cercle::Cercle()
 {
     m_rayon=0;
+    addFig();
+
 }
 
 Cercle::Cercle(int rayon)
 {
     m_rayon=rayon;
+    addFig();
 }
 
 Cercle::~Cercle()
 {
-
+    subFig();
 }
 
 int Cercle::GetRayon()
@@ -36,3 +39,4 @@ void Cercle::afficherCaracteristiques()
 {
     cout<<"Cercle de rayon : "<<m_rayon<<endl;
 }
+

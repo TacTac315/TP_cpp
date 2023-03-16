@@ -6,11 +6,13 @@ using namespace std;
 Polygone::Polygone(int nbCotes)
 {
     m_nbCotes = nbCotes;
+    addFig();
 }
 
 // Destructeur
 Polygone::~Polygone()
 {
+    subFig();
 }
 
 // Methodes

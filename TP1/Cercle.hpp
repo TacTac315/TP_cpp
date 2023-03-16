@@ -17,8 +17,8 @@ void SetRayon(int rayon);
 int perimetre();
 void afficherCaracteristiques();
 
-private:
 
+private:
 int m_rayon;
 };
 
