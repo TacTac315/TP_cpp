@@ -8,6 +8,7 @@ class Rectangle : public Polygone //Rectangle herite de polygone
     //Constructeurs
     Rectangle();
     Rectangle(int largeur, int hauteur);
+    ~Rectangle();
     //Methodes
     int GetLargeur();
     int GetHauteur();

@@ -15,6 +15,10 @@ Rectangle::Rectangle(int largeur, int hauteur) : Polygone(4)
     m_hauteur=hauteur;
 }
 
+Rectangle::~Rectangle()
+{
+}
+
 
 int Rectangle::GetLargeur()
 {
