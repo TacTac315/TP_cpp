@@ -2,14 +2,20 @@
 #include <iostream>
 using namespace std;
 
-Cercle::Cercle()
+Cercle::Cercle() : Coloriable("blanc")
 {
     m_rayon=0;
     addFig();
 
 }
 
-Cercle::Cercle(int rayon)
+Cercle::Cercle(int rayon) : Coloriable("blanc")
+{
+    m_rayon=rayon;
+    addFig();
+}
+
+Cercle::Cercle(int rayon, string couleur) : Coloriable(couleur)
 {
     m_rayon=rayon;
     addFig();
@@ -38,5 +44,6 @@ int Cercle::perimetre()
 void Cercle::afficherCaracteristiques()
 {
     cout<<"Cercle de rayon : "<<m_rayon<<endl;
+    cout<<"Cercle de couleur : "<<getCouleur()<<endl;
 }
 

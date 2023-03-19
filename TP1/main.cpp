@@ -4,7 +4,7 @@
 #include "Rectangle.hpp"
 #include "Carre.hpp"
 #include "TriangleEquilateral.hpp"
-#define NB_ELEMENTS 4
+#define NB_ELEMENTS 5
 using namespace std;
 
 Figure **tabFigure = new Figure *[NB_ELEMENTS];
@@ -14,6 +14,7 @@ int main()
     tabFigure[1] = new TriangleEquilateral(5);
     tabFigure[2] = new Cercle(2);
     tabFigure[3] = new Rectangle(5, 10);
+    tabFigure[4] = new Cercle(8, "rouge");
     cout<<"Il y a "<<tabFigure[0]->m_nbFig<<" figures au total"<<endl; //On utilise notre carré pour accéder à la variable de classe Figure
     for (int i = 0; i < NB_ELEMENTS; ++i)
     {
