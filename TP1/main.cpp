@@ -4,6 +4,7 @@
 #include "Rectangle.hpp"
 #include "Carre.hpp"
 #include "TriangleEquilateral.hpp"
+#include "Cellule.hpp"
 #define NB_ELEMENTS 5
 using namespace std;
 
