@@ -7,8 +7,9 @@
 #include "Cellule.hpp"
 #define NB_ELEMENTS 5
 using namespace std;
-
 Figure **tabFigure = new Figure *[NB_ELEMENTS];
+File<Figure *> fileFigure;
+
 int main()
 {
     tabFigure[0] = new Carre(10);
@@ -30,5 +31,13 @@ int main()
     }
     cout<<"Il y a "<<tabFigure[0]->m_nbFig<<" figures au total"<<endl;
     delete[] tabFigure;
+
+    cout<<"Test de la file"<<endl;
+    fileFigure.enfiler(new Carre(10));
+    fileFigure.enfiler(tabFigure[1]);
+    fileFigure.enfiler(tabFigure[2]);
+    fileFigure.enfiler(tabFigure[3]);
+    fileFigure.enfiler(tabFigure[4]);
+    fileFigure.afficherFile();
     return 0;
 }
