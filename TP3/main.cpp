@@ -90,8 +90,48 @@ void Exo3()
         cout << *it << endl;
     }
 }
+
+void Exo4()
+{
+    map<string, int> Classe;
+    map<string, int>::iterator it;
+    Classe["Antonin"] = 618744580;
+    Classe["Jeremy"] = 518744581;
+    Classe["Claudia"] = 618744582;
+    Classe["Allan"] = 618744583;
+    Classe["Moad"] = 618744584;
+    Classe["Penaldo"] = 518744585;
+    Classe["Pessi"] = 518744586;
+    cout << "Il y a " << Classe.size() << " élèves dans la classe" << endl;
+    cout << "Nom ; Numéro" << endl;
+    for (it = Classe.begin(); it != Classe.end(); it++)
+    {
+        cout << it->first << " ; " << it->second << endl;
+    }
+    cout <<"Nous supprimons tous les eleves dont le numero commence par 5" << endl;
+    it = Classe.begin();
+    while (it != Classe.end())
+    {
+        if (it->second / 100000000 == 5)
+        {
+            Classe.erase(it++);
+        }
+        else
+        {
+            it++;
+        }
+    }
+    cout << "Il y a " << Classe.size() << " élèves dans la classe" << endl;
+    cout << "Nom ; Numéro" << endl;
+    for (it = Classe.begin(); it != Classe.end(); it++)
+    {
+        ;
+        cout << it->first << " ; " << it->second << endl;
+    }
+}
+
 int main(int argc, char **argv)
 {
-    Exo3();
+    Exo4();
     return 0;
 }
