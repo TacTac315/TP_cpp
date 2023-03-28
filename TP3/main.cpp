@@ -1,11 +1,14 @@
 #include <iostream>
 #include <vector>
+#include <list>
 #include <algorithm>
+#include <map>
 using namespace std;
-vector<float> V1;
-vector<float> V2;
-int main(int argc, char **argv)
+
+void Exo1()
 {
+    vector<float> V1;
+    vector<float> V2;
     cout << "V1:" << endl;
     for (int i = 0; i < 10; i++)
     {
@@ -20,12 +23,44 @@ int main(int argc, char **argv)
     {
         V2.pop_back();
     }
-
     cout << "V2:" << endl;
     for (int i = 0; i < V2.size(); i++)
     {
         cout << V2[i] << endl;
     }
+}
 
+void Exo2()
+{
+    list<char> L1;
+    list<char> L2;
+    list<char>::iterator it;
+    cout << "L1:" << endl;
+
+    for (int i = 0; i < 10; i++)
+    {
+        L1.push_back('a' + i);
+        cout << L1.back() << endl;
+    }
+    L2 = L1;
+
+    while (L2.size() > L1.size() / 2)
+    {
+        L2.pop_back();
+    }
+    cout << "L2:" << endl;
+    for (it = L2.begin(); it != L2.end(); it++)
+    {
+        cout << *it << endl;
+    }
+}
+
+
+void Exo3(){
+
+}
+int main(int argc, char **argv)
+{
+    Exo3();
     return 0;
 }
