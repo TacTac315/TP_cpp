@@ -2,6 +2,7 @@
 #include <vector>
 #include <list>
 #include <algorithm>
+#include <set>
 #include <map>
 using namespace std;
 
@@ -55,9 +56,39 @@ void Exo2()
     }
 }
 
-
-void Exo3(){
-
+void Exo3()
+{
+    set<string> Classe;
+    set<string>::iterator it;
+    set<string>::iterator aux;
+    Classe.insert("Antonin");
+    Classe.insert("Jeremy");
+    Classe.insert("Claudia");
+    Classe.insert("Allan");
+    Classe.insert("Moad");
+    Classe.insert("Penaldo");
+    Classe.insert("Pessi");
+    cout << "Il y a " << Classe.size() << " élèves dans la classe" << endl;
+    cout << "Un set trie automatiquement les éléments" << endl;
+    for (it = Classe.begin(); it != Classe.end(); it++)
+    {
+        cout << *it << endl;
+    }
+    cout << "Nous suprimons les deux premiers élèves" << endl;
+    int compteur = 0;
+    it = Classe.begin();
+    while (compteur < 2)
+    {
+        aux = it;
+        it++;
+        Classe.erase(aux);
+        compteur++;
+    }
+    cout << "Il y a " << Classe.size() << " élèves dans la classe" << endl;
+    for (it = Classe.begin(); it != Classe.end(); it++)
+    {
+        cout << *it << endl;
+    }
 }
 int main(int argc, char **argv)
 {
